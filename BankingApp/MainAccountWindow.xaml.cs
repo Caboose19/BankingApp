@@ -17,39 +17,56 @@ namespace BankingApp
     /// </summary>
     public partial class MainAccountWindow : Window
     {
+
+        Random random = new Random();
+
         public MainAccountWindow()
         {
             InitializeComponent();
-        }
+            txtCheckingBalanceAmount.Text = "$"+random.Next(500).ToString();
+            txtSavingsBalanceAmount.Text = "$"+random.Next(500).ToString();
+        } 
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
 
         private void btnMakeDeposit_Click(object sender, RoutedEventArgs e)
         {
+            MakeDepositWindow depositWindow = new MakeDepositWindow();
 
+            depositWindow.Show();
+            this.Close();
         }
 
         private void btnMakeWithdrawl_Click(object sender, RoutedEventArgs e)
         {
-
+            WithdrawalWindow withdrawal = new WithdrawalWindow();
+            withdrawal.Show();
+            this.Close();
         }
 
         private void btnTransferFunds_Click(object sender, RoutedEventArgs e)
         {
-
+            TransferFundsWindow transfer = new TransferFundsWindow();
+            transfer.Show();
+            this.Close();
         }
 
         private void btnMakePurchase_Click(object sender, RoutedEventArgs e)
         {
+            MakePurchaseWindow purchase = new MakePurchaseWindow();
+            purchase.Show();
+            this.Close();
 
         }
 
         private void btnViewTransactionHistory_Click(object sender, RoutedEventArgs e)
         {
-
+            TransactionHistoryWindow main = new TransactionHistoryWindow();
+            main.Show();
+           this.Close();
         }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
