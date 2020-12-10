@@ -19,6 +19,8 @@ namespace BankingApp
     {
 
         Random random = new Random();
+        public static WithdrawalWindow withdrawal = new WithdrawalWindow();
+        public static TransferFundsWindow transfer = new TransferFundsWindow();
 
         public MainAccountWindow()
         {
@@ -39,22 +41,21 @@ namespace BankingApp
             depositWindow.Show();
         }
 
+
         private void btnMakeWithdrawl_Click(object sender, RoutedEventArgs e)
         {
-            WithdrawalWindow withdrawal = new WithdrawalWindow();
             withdrawal.Show();
         }
 
         private void btnTransferFunds_Click(object sender, RoutedEventArgs e)
         {
-            TransferFundsWindow transfer = new TransferFundsWindow();
             transfer.Show();
         }
 
         private void btnMakePurchase_Click(object sender, RoutedEventArgs e)
         {
             MakePurchaseWindow purchase = new MakePurchaseWindow();
-            purchase.Show();
+            purchase.Activate();
         }
 
         private void btnViewTransactionHistory_Click(object sender, RoutedEventArgs e)
@@ -68,6 +69,16 @@ namespace BankingApp
             MainWindow main = new MainWindow();
             main.Show();
             this.Close();
+        }
+
+        public static void shutdownWithdrawal()
+        {
+            withdrawal.Hide();
+        }
+
+        public static void shutdownTransfer()
+        {
+            transfer.Hide();
         }
     }
 }

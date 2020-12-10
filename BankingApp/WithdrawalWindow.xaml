@@ -9,9 +9,9 @@
     <Grid>
         <Button Content="Withdraw" x:Name="WithdrawMoney" HorizontalAlignment="Center" Margin="0,283,0,0" VerticalAlignment="Top" Height="38" Width="180" Click="WithdrawMoney_Click"/>
         <Button Content="Cancel" x:Name="Cancel" HorizontalAlignment="Left" Margin="620,346,0,0" VerticalAlignment="Top" Height="39" Width="122" Click="Cancel_Click"/>
-        <TextBox HorizontalAlignment="Center" x:Name="Balance" Margin="0,89,0,0" Text="Current Balance: {Balance}" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="39" FontSize="24" FontFamily="Bahnschrift SemiBold"/>
-        <TextBox HorizontalAlignment="Left" x:Name="WithdrawQuestion" Margin="92,0,0,0" Text="Enter Withdraw Amount: " TextWrapping="Wrap" VerticalAlignment="Center" Width="308" Height="41" FontSize="24" FontFamily="Bahnschrift SemiBold" TextAlignment="Center"/>
-        <TextBox HorizontalAlignment="Left" x:Name="InputWithdraw" Margin="487,0,0,0" Text="$100" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Height="41" FontSize="24" FontFamily="Bahnschrift Light" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" x:Name="Balance" Margin="0,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" Height="39" FontSize="24" FontFamily="Bahnschrift SemiBold"/>
+        <TextBlock HorizontalAlignment="Left" x:Name="WithdrawQuestion" Margin="92,0,0,0" Text="Enter Withdraw Amount: " TextWrapping="Wrap" VerticalAlignment="Center" Width="308" Height="41" FontSize="24" FontFamily="Bahnschrift SemiBold" TextAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" x:Name="InputWithdraw" Text="100" Margin="487,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Height="41" FontSize="24" FontFamily="Bahnschrift Light" TextAlignment="Center" />
 
     </Grid>
 </Window>
